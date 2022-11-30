@@ -79,7 +79,7 @@ function Reserve () {
        <h1 className='name'>Woman's shelter</h1>
        {/* <div>
        <ul>
-        <li>CHECK-IN <br> 1/18/2023</br></li>
+        <li>CHECK-IN ss <br> 1/18/2023</br></li>
         <li>CHECK-OUT <br> Unknown</br></li>
        </ul>
        <div>GUEST <span>toggle bar</span></div>
