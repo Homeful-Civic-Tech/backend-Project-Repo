@@ -1,5 +1,6 @@
 const {pool} = require('./db.js');
-const userRoutes = require('./routes/routes.js')
+const userRoutes = require('./routes/usersRoutes.js')
+const roomsRoutes = require('./routes/roomsRoutes.js')
 const cors = require('cors');
 const express = require('express');
 
@@ -9,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/user',userRoutes);
+app.use('/rooms',roomsRoutes)
 
 
 app.listen(port, () => {

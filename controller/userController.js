@@ -1,6 +1,6 @@
 const { request, response } = require('express');
 const {pool} = require('../db.js');
-const user = require('../models/models.js')
+const user = require('../models/usersModels.js')
 const bcrypt = require('bcrypt')
 
 const addUser = async (request, response) => {
