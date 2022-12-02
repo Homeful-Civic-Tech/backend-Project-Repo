@@ -1,4 +1,7 @@
 # Logs
+/db.js
+/knexfile.js
+
 logs
 *.log
 npm-debug.log*
