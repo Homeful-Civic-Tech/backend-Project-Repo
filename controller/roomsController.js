@@ -1,3 +1,4 @@
+const { request } = require('express');
 const {pool} = require('../db.js');
 const rooms = require('../models/roomsModels.js')
 
@@ -9,7 +10,14 @@ const addRoom = async (request, response) => {
     response.send(roomInfo)
 }
 
+const getRooms = async (request,response) => {
+    roomsInfo = await rooms.getAllRoomsFromDB()
+    const data = roomsInfo.rows
+    response.send(data)
+}
+
 module.exports ={
-    addRoom
+    addRoom,
+    getRooms
 }
 

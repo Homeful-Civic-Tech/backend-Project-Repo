@@ -19,7 +19,7 @@ const loginb = (event) => {
 
     fetch(`http://localhost:4008/user/login/${fnamelval}/${lnamelval}`, requestOptions)
     .then(response => response.json())
-    .then(result => console.log(result))
+    .then(result => console.log(result,1))
     .catch(error => console.log('error', error));
 }
 

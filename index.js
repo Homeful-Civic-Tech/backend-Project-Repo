@@ -41,9 +41,9 @@ const signinBt = (event) => {
 
     fetch("http://localhost:4008/user", requestOptions)
     .then(response => response.json())
-    .then(result => console.log(result))
+    .then(result => {console.log(result)})
     .catch(error => console.log('error', error));
-    window.location.href = "./index.html";
+    window.location.href = "./login.html";
 
 }
 
