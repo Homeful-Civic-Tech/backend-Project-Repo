@@ -1,3 +1,5 @@
+/knexfile.js
+/db.js
 # Logs
 logs
 *.log
