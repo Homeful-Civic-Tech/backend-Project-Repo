@@ -4,6 +4,8 @@ const router = express.Router();
 const sheltersController = require('../controller/sheltersController.js');
 
 router.get('/',sheltersController.allShelters)
+router.get('/:id',sheltersController.oneShelter)
+
 
 
 module.exports = router;
