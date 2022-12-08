@@ -9,7 +9,7 @@ class Rooms{
 
     static getAllRoomsFromDB(){
         return pool.query(
-            'SELECT * FROM  rooms');
+            'SELECT * FROM rooms');
     
         }
     }
