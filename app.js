@@ -16,6 +16,7 @@ app.use('/user',userRoutes);
 app.use('/rooms',roomsRoutes)
 app.use('/shelters',sheltersRoutes)
 app.use('/reservations', reservationsRoutes)
+app.use('/reservations/:id', reservationsRoutes)
 
 // app.get('/shelters', async(req,res) => {
 //     const getshelters = await pool.query('SELECT * FROM shelters').then(results => {return results.rows})
