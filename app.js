@@ -2,6 +2,7 @@ const {pool} = require('./db.js');
 const userRoutes = require('./routes/usersRoutes.js')
 const roomsRoutes = require('./routes/roomsRoutes.js')
 const sheltersRoutes = require('./routes/sheltersRoutes.js')
+const reservationsRoutes = require('./routes/reservationsRoutes')
 const cors = require('cors');
 const express = require('express');
 
@@ -10,9 +11,11 @@ const port = 4009;
 app.use(cors());
 app.use(express.json());
 
+
 app.use('/user',userRoutes);
 app.use('/rooms',roomsRoutes)
 app.use('/shelters',sheltersRoutes)
+app.use('/reservations', reservationsRoutes)
 
 // app.get('/shelters', async(req,res) => {
 //     const getshelters = await pool.query('SELECT * FROM shelters').then(results => {return results.rows})
