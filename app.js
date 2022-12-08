@@ -17,11 +17,14 @@ app.use('/rooms',roomsRoutes)
 app.use('/shelters',sheltersRoutes)
 app.use('/reservations', reservationsRoutes)
 app.use('/reservations/:id', reservationsRoutes)
+app.use('/shelters/:id',sheltersRoutes)
 
-// app.get('/shelters', async(req,res) => {
-//     const getshelters = await pool.query('SELECT * FROM shelters').then(results => {return results.rows})
-//   if(getshelters){
-//      res.status(200).json(getshelters)
+
+// app.get('/shelters/:id', async(req,res) => {
+//     const id = req.params.id;
+//     const get1shelter = await pool.query('SELECT * FROM shelters WHERE id = $1',[id]).then(results =>  {return results.rows[0]})
+//   if(get1shelter){
+//      res.status(200).json(get1shelter)
 //   } else {
 //     res.sendStatus(404)
 //   } 
