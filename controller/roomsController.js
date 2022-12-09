@@ -4,8 +4,8 @@ const rooms = require('../models/roomsModels.js')
 
 
 const addRoom = async (request, response) => {
-    const {name,bio,location,url,typeofs,quantity,userid} = request.body;
-    const postRoom = await rooms.postRoomToDB(name,bio,location,url,typeofs,quantity,userid)
+    const {name,bio,location,phone_num,url,type_of,quantity,category,userid} = request.body;
+    const postRoom = await rooms.postRoomToDB(name,bio,location,phone_num,url,type_of,quantity,category,userid)
     const roomInfo = postRoom.rows[0]
     response.send(roomInfo)
 }

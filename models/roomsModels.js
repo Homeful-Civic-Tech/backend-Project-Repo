@@ -1,9 +1,9 @@
 const {pool} = require('../db.js');
 
 class Rooms{
-    static postRoomToDB(name,bio,location,url,typeofs,quantity,userid){
+    static postRoomToDB(name,bio,location,phone_num,url,typeofs,quantity,category,userid){
         return pool.query(
-            'INSERT INTO rooms(name,bio,location,url,typeofs,quantity,userid) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *',[name,bio,location,url,typeofs,quantity,userid]);
+            'INSERT INTO rooms(name,bio,location,phone_num,url,type_of,quantity,category,userid) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *',[name,bio,location,phone_num,url,typeofs,quantity,category,userid]);
     
         }
 
