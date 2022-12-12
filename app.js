@@ -16,7 +16,7 @@ app.use('/rooms',roomsRoutes)
 app.use('/shelters',sheltersRoutes)
 app.use('/reservations', reservationsRoutes)
 app.use('/reservations/:id', reservationsRoutes)
-app.use('/shelters/:id',sheltersRoutes)
+// app.use('/shelters/:id',sheltersRoutes)
 app.use('/reviews', reviewRoutes)
 
 

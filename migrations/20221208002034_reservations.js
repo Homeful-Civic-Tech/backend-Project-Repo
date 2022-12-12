@@ -13,6 +13,7 @@ exports.up = function(knex) {
     table.text('lastname').notNullable();
     table.text('email').notNullable();
     table.integer('user_id').references('id').inTable('users');
+    table.integer('shelter_id').references('id').inTable('shelters');
   })
 };
 

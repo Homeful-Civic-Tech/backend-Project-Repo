@@ -5,6 +5,7 @@ const sheltersController = require('../controller/sheltersController.js');
 
 router.get('/',sheltersController.allShelters)
 router.get('/:id',sheltersController.oneShelter)
+router.get('/user/:user_id', sheltersController.UserShelter)
 
 
 
