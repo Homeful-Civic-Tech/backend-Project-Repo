@@ -4,26 +4,16 @@ const roomsRoutes = require('./routes/roomsRoutes.js')
 const sheltersRoutes = require('./routes/sheltersRoutes.js')
 const cors = require('cors');
 const express = require('express');
-
+const  reviewRoutes = require('./routes/reviewRoutes.js')
 const app = express();
 const port = 4009; 
 app.use(cors());
 app.use(express.json());
 
-app.use('/user',userRoutes);
-app.use('/rooms',roomsRoutes)
-app.use('/shelters',sheltersRoutes)
-
-// app.get('/shelters', async(req,res) => {
-//     const getshelters = await pool.query('SELECT * FROM shelters').then(results => {return results.rows})
-//   if(getshelters){
-//      res.status(200).json(getshelters)
-//   } else {
-//     res.sendStatus(404)
-//   } 
-// });
-
-
+app.use('/user', userRoutes);
+app.use('/rooms', roomsRoutes)
+app.use('/shelters', sheltersRoutes)
+app.use('/reviews', reviewRoutes)
 
 
 // all other paths

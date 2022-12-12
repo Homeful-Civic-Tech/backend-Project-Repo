@@ -6,4 +6,5 @@ const sheltersController = require('../controller/sheltersController.js');
 router.get('/',sheltersController.allShelters)
 
 
+
 module.exports = router;
