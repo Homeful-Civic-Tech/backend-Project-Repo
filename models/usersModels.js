@@ -2,6 +2,7 @@ const {pool} = require('../db.js');
 
 class User{
     static postUserToDB(firstname,lastname,username,email,sex,password){
+        console.log('water bottle')
         return pool.query(
             'INSERT INTO users(firstname,lastname,username,email,sex,password) VALUES($1, $2, $3, $4, $5, $6) RETURNING *',[firstname,lastname,username,email,sex,password]);
     

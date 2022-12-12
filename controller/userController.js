@@ -9,6 +9,7 @@ const addUser = async (request, response) => {
     try {
         console.log(request.body)
         const hashedPassword = await bcrypt.hash(password, 10)
+        console.log(hashedPassword)
         const postUser =  user.postUserToDB(firstname,lastname,username,email,sex,hashedPassword);
         const insertedUser = postUser.rows[0];
         response.send(insertedUser);
