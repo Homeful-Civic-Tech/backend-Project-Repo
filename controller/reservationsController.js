@@ -9,8 +9,9 @@ const addReservation = async(request, response) => {
     response.send(reservationsInfo)
 }
 
-const getReservations = async(request, response) => {
-    reservationsInfo = await reservations.getAllReservationsFromDB();
+const getReservationsOfUser = async(request, response) => {
+    const user = request.params.id;
+    reservationsInfo = await reservations.getAllReservationsFromDB(user);
     const data = reservationsInfo.rows
     response.send(data)
 }
@@ -19,5 +20,5 @@ const getReservations = async(request, response) => {
 
 module.exports = {
     addReservation,
-    getReservations
+    getReservationsOfUser
 }
