@@ -1,6 +1,6 @@
-const login = document.getElementById('login')
-const lnamel = document.getElementById('lnamel')
-const fnamel = document.getElementById('fnamel')
+const login = documant.getElemantById('login')
+const lnamel = documant.getElemantById('lnamel')
+const fnamel = documant.getElemantById('fnamel')
 
 
 const loginb = (event) => {
