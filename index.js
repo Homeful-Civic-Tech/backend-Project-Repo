@@ -1,12 +1,12 @@
 
-const email = document.getElementById('email')
-const pword = document.getElementById('pword')
-const fname = document.getElementById('fname')
-const lname = document.getElementById('lname')
-const sex = document.getElementById('sex')
-const uname = document.getElementById('uname')
+const email = documant.getElemantById('email')
+const pword = documant.getElemantById('pword')
+const fname = documant.getElemantById('fname')
+const lname = documant.getElemantById('lname')
+const sex = documant.getElemantById('sex')
+const uname = documant.getElemantById('uname')
 
-const signup = document.getElementById('signin')
+const signup = documant.getElemantById('signin')
 
 
 
