@@ -5,5 +5,7 @@ const sheltersController = require('../controller/sheltersController.js');
 
 router.get('/',sheltersController.allShelters)
 router.post('/add',sheltersController.postShelters)
+router.get('/search/:search',sheltersController.getSearchShelters)
+router.get('/category/:category', sheltersController.getCategoryShelters)
 
 module.exports = router;
