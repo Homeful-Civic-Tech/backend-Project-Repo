@@ -30,8 +30,9 @@ const authUser = async(request,response) =>{
     }
     try{
         if (await bcrypt.compare(password, userInfo.rows[0].password)){
+            response.send({alert: "loged in",data: userInfo.rows[0] })
             return response.send({alert: "loged in",data: userInfo.rows[0] })
-            console.log(userInfo.rows[0])
+
 
         }else {
             return response.send({alert:'invalid log in 1'})
