@@ -1,4 +1,4 @@
-const {pool} = require('../db.js');
+const pool = require('../db.js');
 
 class Rooms{
     static postRoomToDB(name,bio,location,url,typeofs,quantity,userid){

@@ -22,6 +22,7 @@ const addUser = async (request, response) => {
 const authUser = async(request,response) =>{
     const username = request.params.name;
     const password = request.params.password;
+    console.log(username,password)
     const userInfo = await user.checkUser(username)
 
     if (userInfo.rows.length === 0 ){
