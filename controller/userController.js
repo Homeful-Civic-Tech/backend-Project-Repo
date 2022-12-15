@@ -40,8 +40,12 @@ const authUser = async(request,response) =>{
     }
 }
 
+
+
+
 module.exports ={
     addUser,
-    authUser
+    authUser,
+    
 }
 
