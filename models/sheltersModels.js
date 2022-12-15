@@ -30,14 +30,9 @@ async function getUserShelter(user){
 
 module.exports = {
    getShelters,
-<<<<<<< HEAD
-   shelterId,
-   getUserShelter
-=======
    getSearchShelters,
    addShelters,
    getCategoryShelters,
    shelterId
 
->>>>>>> 56a91e7855f001ab2c1114edd14ee5b7fe90a28b
 };
