@@ -1,4 +1,4 @@
-const {pool} = require('../db.js');
+const { pool } = require('../db.js');
 
 class User{
     static postUserToDB(firstname,lastname,username,email,sex,password){

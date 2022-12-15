@@ -5,7 +5,7 @@ const sheltersRoutes = require('./routes/sheltersRoutes.js')
 const reservationsRoutes = require('./routes/reservationsRoutes')
 const cors = require('cors');
 const express = require('express');
-
+const  reviewRoutes = require('./routes/reviewRoutes.js')
 const app = express();
 const port = 4009; 
 app.use(cors());
@@ -17,6 +17,7 @@ app.use('/shelters',sheltersRoutes)
 app.use('/reservations', reservationsRoutes)
 app.use('/reservations/:id', reservationsRoutes)
 app.use('/shelters/:id',sheltersRoutes)
+app.use('/reviews', reviewRoutes)
 
 
 // app.get('/shelters/:id', async(req,res) => {
@@ -28,7 +29,6 @@ app.use('/shelters/:id',sheltersRoutes)
 //     res.sendStatus(404)
 //   } 
 // });
-
 
 
 
