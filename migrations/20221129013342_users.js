@@ -4,7 +4,6 @@
  */
  exports.up = function(knex) {
     return knex.schema.createTable('users', (table)=> {
-      //primary key that will be the foreign key engineer profile so show every post they made it will, connect to the post table.
       table.increments('id').primary();
       table.string('firstname').notNullable;
       table.string('lastname').notNullable;
