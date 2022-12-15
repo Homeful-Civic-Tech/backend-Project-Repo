@@ -16,6 +16,7 @@ app.use('/rooms', roomsRoutes);
 app.use('/shelters', sheltersRoutes);
 app.use('/reservations', reservationsRoutes);
 
+
 app.all('*', (req, res) => {
     res.send('Path does not exist')
 });
