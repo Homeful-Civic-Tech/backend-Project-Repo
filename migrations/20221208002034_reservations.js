@@ -11,6 +11,7 @@ exports.up = function(knex) {
     table.text('email').notNullable();
     table.text('message')
     table.integer('user_id').references('id').inTable('users');
+    table.integer('shelter_id').references('id').inTable('shelters');
   })
 };
 

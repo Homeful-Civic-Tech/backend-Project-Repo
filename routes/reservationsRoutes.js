@@ -6,4 +6,5 @@ router.post('/',reservationsController.addReservation)
 router.get("/:id", reservationsController.getReservationsOfUser)
 
 
+
 module.exports = router;
