@@ -5,8 +5,8 @@ const { shelterId } = require('../models/sheltersModels.js');
 
 
 const addReservation = async(request, response) => {
-    const {username, message,gender,quantity_of_people, firstname, lastname, email, user_id,shelter_id} = request.body;
-    const postReservation = await reservations.postReservationsToDB(username, message,gender,quantity_of_people, firstname, lastname, email, user_id, shelter_id)
+    const {firstname, lastname, gender, email, message, shelter_id, user_id} = request.body;
+    const postReservation = await reservations.postReservationsToDB(firstname, lastname, gender, email, message, shelter_id, user_id)
     const reservationsInfo = postReservation.rows[0]
     response.send(reservationsInfo)
 
@@ -14,9 +14,9 @@ const addReservation = async(request, response) => {
 
 const getReservationsOfUser = async (request, response) => {
     const user = request.params.id;
-    reservationsInfo = await reservations.getAllReservationsFromDB(user);
-    const data = reservationsInfo.rows;
-    response.send(data);
+    const reservationsInfo = await reservations.getAllReservationsFromDB(user);
+    const data = reservationsInfo.rows
+    response.send(data)
 }
 
 

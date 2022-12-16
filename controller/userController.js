@@ -7,9 +7,7 @@ const addUser = async (request, response) => {
     const {firstname,lastname,username,email,sex,password} = request.body;
     try {
         const hashedPassword = await bcrypt.hash(password, 10)
-        console.log(hashedPassword)
         const postUser =  await user.postUserToDB(firstname,lastname,username,email,sex,hashedPassword);
-        console.log(postUser)
         const insertedUser = postUser.rows[0];
         console.log(insertedUser)
         response.send(insertedUser);
@@ -23,21 +21,23 @@ const addUser = async (request, response) => {
 const authUser = async(request,response) =>{
     const username = request.params.name;
     const password = request.params.password;
-    const userInfo = await user.checkUser(username);
+   
+    const userInfo = await user.checkUser(username)
+ 
     if (userInfo.rows.length === 0 ){
-        return response.send({alert: "Wrong Username"});
+        return response.send({alert: "invalid log in"})
     }
     try{
         if (await bcrypt.compare(password, userInfo.rows[0].password)){
-            return response.send({alert: "loged in", data: userInfo.rows[0]});
+            return response.send({alert: "loged in", data: userInfo.rows[0] })
             
 
 
         }else {
-            return response.send({alert:'Wrong Password'});
+            return response.send({alert:'invalid log in 1'})
         }
     }catch{
-        return response.send('Did not go to database');
+        return response.send('not ok')
     }
 }
 
