@@ -5,14 +5,14 @@ const bcrypt = require('bcrypt')
 
 const addUser = async (request, response) => {
     const {firstname,lastname,username,email,sex,password} = request.body;
-    
     try {
         const hashedPassword = await bcrypt.hash(password, 10)
         const postUser =  await user.postUserToDB(firstname,lastname,username,email,sex,hashedPassword);
         const insertedUser = postUser.rows[0];
+        console.log(insertedUser)
         response.send(insertedUser);
     }catch{
-        response.send('all bad lol')
+        response.send('Need all info on user.');
     }
 
     

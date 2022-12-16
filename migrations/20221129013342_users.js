@@ -7,10 +7,10 @@
       table.increments('id').primary();
       table.string('firstname').notNullable;
       table.string('lastname').notNullable;
-      table.string('username').notNullable;
-      table.string('email').notNullable;
+      table.string('username').notNull().unique();
+      table.string('email').notNull().unique();
       table.string('sex').notNullable;
-      table.string('password').notNullable;
+      table.string('password').notNullable
     })
 };
 
