@@ -4,13 +4,15 @@
  */
 exports.up = function(knex) {
   return knex.schema.createTable('reservations', (table) => {
-    table.increments('reservations_id').primary();
-    table.text('firstname').notNullable();
-    table.text('lastname').notNullable();
-    table.text('gender').notNullable()
-    table.text('email').notNullable();
-    table.text('message')
+    table.increments('id').primary();
+    table.string('firstname').notNullable();
+    table.string('lastname').notNullable();
+    table.string('gender').notNullable()
+    table.string('email').notNullable();
+    table.string('message')
     table.integer('user_id').references('id').inTable('users');
+    table.integer('shelter_id').references('id').inTable('shelters');
+
   })
 };
 
