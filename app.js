@@ -12,9 +12,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/user',userRoutes);
-app.use('/rooms',roomsRoutes)
-app.use('/shelters',sheltersRoutes)
-app.use('/reservations', reservationsRoutes)
+app.use('/rooms',roomsRoutes);
+app.use('/shelters',sheltersRoutes);
+app.use('/reservations', reservationsRoutes);
 
 
 
