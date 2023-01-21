@@ -1,5 +1,4 @@
-/knexfile.js
-/db.js
+
 # Logs
 logs
 *.log
@@ -71,8 +70,7 @@ typings/
 .yarn-integrity
 
 # dotenv environmant variables file
-.env
-.env.test
+
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
