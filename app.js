@@ -8,7 +8,7 @@ const reservationsRoutes = require('./routes/reservationsRoutes');
 const cors = require('cors');
 const express = require('express');
 const app = express();
-const port = prosses.env.PORT || 4009;
+const port = process.env.PORT || 4109;
 app.use(cors());
 app.use(express.json());
 
